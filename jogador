@@ -1,0 +1,33 @@
+class Jogador:
+    def __init__(self,name,age,residence,position,foot):
+        self.name=name
+        self.age=age
+        self.residence=residence
+        self.position=position
+        self.foot=foot
+
+    def play(self):
+        print (self.name+", "+str(self.age)+" anos e residente na "+self.residence+", joga como " + self.position)
+    
+    def shoot(self):
+        print (self.name+ " chuta com a perna " + self.foot)
+
+jogador1 = Jogador("Sneijder", 40, "Holanda", "atacante", "esquerda")
+jogador2 = Jogador("Eriksen",31, "Dinamarca", "meiocampista","direita")
+jogador3 = Jogador("Pavard",27,"França","lateral","direita")
+
+option=input("Digite 1, 2 ou 3 para ver o perfil de um jogador famoso: ")
+while option !="1" and option !="2" and option !="3":
+    option=input("Digite 1, 2 ou 3 para ver o perfil de um jogador famoso: ")
+
+if option =="1":
+    jogador1.play()
+    jogador1.shoot()
+
+if option =="2":
+    jogador2.play()
+    jogador2.shoot()
+
+if option =="3":
+    jogador3.play()
+    jogador3.shoot()
